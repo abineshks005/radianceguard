@@ -4,10 +4,10 @@
 #include <HTTPClient.h> // Include the HTTPClient library
 
 // Replace with your WiFi credentials and ThingSpeak API keys
-const char* ssid = "vivo 1920";
-const char* password = "ksvp1234";
-const char* apiWriteKey = "88H8OQPY55B78RH8";
-const int channelID = 2446165;
+const char* ssid = "";
+const char* password = "";
+const char* apiWriteKey = "";
+const int channelID = ;
 
 const int sensorPin = 35;
 const int speakerPin = 5;
@@ -61,14 +61,14 @@ void sendSMSNotification() {
   HTTPClient http; // Declare an object of class HTTPClient
 
   // Construct the Twilio API URL with your account SID and authentication token
-  String url = "https://api.twilio.com/2010-04-01/Accounts/ACbbdb1a9c3942f2973120416566173421/Messages.json";
+  String url = "https://api.twilio.com/";
   
   // Replace YOUR_ACCOUNT_SID, YOUR_AUTH_TOKEN, YOUR_TWILIO_NUMBER, and YOUR_DESTINATION_NUMBER with your Twilio credentials
   String message = "Your sensor value exceeded the threshold!";
-  String postData = "From=+17816795326&To=+916374313452&Body=" + message;
+  String postData = "From=&To=&Body=" + message;
   
   // HTTP Basic Authentication
-  String auth = "ACbbdb1a9c3942f2973120416566173421:73d7ebae2593a558113cb3a99e8ecfbd";
+  String auth = "";
   String authHeader = "Basic " + base64_encode(auth);
   
   // Set HTTP headers
